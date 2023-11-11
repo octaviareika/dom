@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>              
+        // ...
+
+        const destaquePrimeiro = document.querySelector("#primeiro");
+        destaquePrimeiro.classList.add('destaque');
+
+        const div = document.getElementsByTagName("div");
+        var divisoes = Array.from(div); // criar um array para divs(ja que sao mais de uma)
+        divisoes.forEach((divisao) => {
+            divisao.classList.add('destaque');
+        });
+
+        /*tecnica do espalhamento*/
+        // const divisoes = [...div]
+    </script>
+</body>
+</html>

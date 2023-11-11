@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <script>
+        // ...
+
+        const textoNaDiv = document.querySelector('div');
+        textoNaDiv.innerHTML ="<p>Texto alterado</p>"
+
+        textoNaDiv.insertAdjacentHTML('beforebegin',"<p>Antes do texto alterado</p>"); // eh uma função que serve para parar antes da div que foi selecionada
+        textoNaDiv.insertAdjacentHTML('afterbegin', "<p>Dentro da div do texto alterado</p>");
+        textoNaDiv.insertAdjacentHTML('beforeend, "<p>Antes do fim da div do texto alterado</p>');
+    </script>
+</body>
+
+</html>

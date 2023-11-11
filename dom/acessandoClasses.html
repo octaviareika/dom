@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Classes</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        Classes
+    </div>
+    <script>
+        // ...
+        const classe = document.querySelector('div');
+        console.log(classe);
+
+        classe.classList.add('classeNova');
+        console.log(classe)
+
+        classe.classList.toggle('classeNova') // vai remover ja que tinhamos adicionado uma classe nova anteriormente 
+
+        const verificar = classe.classList.contains('classeNova')
+        console.log(verificar) // vai dar false
+
+        classe.classList.toggle('classeNova');
+        classe.classList.add('classeNova2')
+        console.log(classe)
+
+        console.log(classe.classList.length)
+
+        for (let c of classe.classList){ // tem que ter o classList quando for fazer o laço de repetição
+            console.log(c)
+        }
+
+        classe.classList.forEach(cadaClasse => {
+            console.log(cadaClasse)
+        })
+
+        
+    </script>
+</body>
+
+</html>

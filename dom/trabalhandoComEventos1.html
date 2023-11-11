@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a href="https://google.com.br">Google</a>
+    </div>
+    <script>
+        // ...
+
+        const clicando = document.querySelector('a');
+        
+        clicando.addEventListener('click', (evento)=>{
+            evento.preventDefault();
+
+            console.log(evento.target);
+
+            setTimeout(()=> {
+                
+                const link = evento.target;
+                window.location.href = link.href//vai te direcionar para uma nova página em 5 segundos
+            }, 5000)
+
+        })
+    </script>
+</body>

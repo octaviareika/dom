@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul><li>Pedro</li><li>Ana</li><li>Bia</li></ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        // ...
+
+        function log(){ // tecnica de impressão sem precisar usar o console.log
+            console.log(this);
+        }
+
+        HTMLCollection.prototype.log = log;
+        NodeList.prototype.log = log;
+        Node.prototype.log = log;
+        HTMLElement.prototype.log = log;
+
+        const lista = document.querySelector('div ul');
+        lista.parentNode.log();
+        lista.childNodes.log();
+
+        const primeiro = lista.firstChild; // primeiro filho dentro da lista é o li (Pedro)
+        primeiro.log();
+        primeiro.nextSibling.log(); // O próximo irmão é o segundo li (Ana)
+
+        const ultimo = lista.lastChild;
+        ultimo.log(); // imprime Bia
+
+        lista.children.log(); // vem em forma dw HTMLCollection
+        lista.firstElementChild.log(); // mais prático
+        lista.lastElementChild.log();
+    </script>
+</body>
+
+</html>
