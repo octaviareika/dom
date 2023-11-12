@@ -11,5 +11,18 @@
     <div>Elemento</div>
     <script>
         // ...
+
+        const elemento = document.querySelector('div');
+        elemento.style.position = 'absolute'; // deixar o elemento na posição absolute 
+
+        elemento.onmousedown = evento => {
+            const alvo = evento.target;
+
+            alvo.style.cursor = 'move';
+                if (evento.buttons){
+                    alvo.style.top = `${e.clientY - (item.clientHeight/2)}px`
+                    alvo.style.left = `${e.clientX - (item.clientWidth)/2}px`
+                }
+        }
     </script>
 </body>
