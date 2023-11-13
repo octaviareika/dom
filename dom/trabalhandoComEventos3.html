@@ -49,6 +49,13 @@
 
         const itens = document.querySelectorAll('.item');
         console.log(itens)
+
+        itens.forEach((item, indice) => {
+            item.draggable = true; // conseguir arrastar um item para qualquer lugar 
+            item.id = item.id || `draggable-itens${indice}`// criar um novo id e colocar em cada div de acordo com o indice
+        })
+
+        const dropzones = document.querySelectorAll('[wm-dropzone]')
     </script>
 </body>
 

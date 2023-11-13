@@ -32,5 +32,21 @@
     </form>
     <script>
         // ...
+        const submit = document.querySelector('[wm-submit]');
+
+        submit.addEventListener('click', (evento)=>{
+            evento.preventDefault();
+
+            const form = evento.target.parentNode;
+            const formData = new FormData(form) // pega o elemento que envolve o botão, no caso o elemento-pai form
+            formData.append('ajax', true);
+            formData.get('q') // pegar o valor que tem dentro do input com nome q
+            formData.has('hl')// verifica se no formulário tem o nome de 'hl'
+
+            for (let dado of formData){
+                console.log(dado);
+            }
+        })
+
     </script>
 </body>
